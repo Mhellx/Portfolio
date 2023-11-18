@@ -26,6 +26,19 @@ body {
     color: var(--text-color);
 }
 
+body::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--bg-color);
+  }
+  body::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 2rem;
+    border: 0.3rem solid var(--bg-color);
+  }
+
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
@@ -74,7 +87,7 @@ section {
 
 .navbar p,
 .logo p {
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .navbar p:hover,
@@ -89,11 +102,10 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 70px 10% 0;
 }
 
 .inicio-content {
-    max-width: 600px;
+    max-width: 60rem;
 }
 
 .inicio-content h3 {
@@ -111,7 +123,7 @@ section {
     animation-delay: 0.7s;
 }
 
-.inicio-content h3 span {
+span {
     color: var(--main-color);
 }
 
@@ -150,12 +162,12 @@ section {
     font-size: 2rem;
     color: var(--main-color);
     margin: 3rem 1.5rem 3rem 0;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .social-media a:hover {
     background: var(--main-color);
-    color: #1f242d;
+    color: var(--bg-color);
     box-shadow: 0 0 2rem var(--main-color);
     transform: scale(1.15);
 }
@@ -176,7 +188,7 @@ section {
     color: var(--main-color);
     letter-spacing: 0.1rem;
     font-weight: 600;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .btn:hover {
@@ -187,19 +199,222 @@ section {
 }
 
 .inicio-img img {
-    height: 40vw;
-    margin-right: -50px;
-    margin-top: 15px;
+    height: 38vw;
     opacity: 0;
     animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
     animation-delay: 1.3s, 2.3s;
 }
 
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--second-bg-color);
+}
+
+.sobre-img {
+    width: 38vw;
+    margin-left: -50px;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.sobre-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.sobre-content h3 {
+    font-size: 2.6rem;
+}
+
+.sobre-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.formacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+
+.formacao h2 {
+    margin-bottom: 3rem;
+}
+
+.formacao .formacao-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.formacao-row .formacao-column {
+    flex: 1 1 40rem;
+}
+
+.formacao-column .title {
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+.formacao-column .formacao-box {
+    border-left: 0.2rem solid var(--main-color);
+}
+
+.formacao-box .formacao-content {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.formacao-box .formacao-content::before {
+    content: '';
+    position: absolute;
+    top: 1.8rem;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--main-color);
+    border-radius: 50%;
+}
+
+.formacao-content .content {
+    position: relative;
+    padding: 1.5rem;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 0.6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.formacao-content .content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: 0.5s ease;
+}
+
+.formacao-content .content:hover:before {
+    width: 100%;
+}
+
+.formacao-content .content .year {
+    font-size: 1.7rem;
+    color: var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+.formacao-content .content .year i {
+    padding-right: 0.5rem;
+}
+
+.formacao-content .content h3 {
+    font-size: 1.9rem;
+}
+
+.formacao-content .content p {
+    font-size: 1.6rem;
+    padding-top: 0.5rem;
+}
+
+.portfolio {
+    background-color: var(--second-bg-color);
+}
+
+.portfolio h2 {
+    margin-bottom: 4rem;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.portfolio-container .portfolio-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.portfolio-box img {
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: 0.5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+    transform: translateY(0);
+}
+
+.portfolio-layer h4 {
+    font-size: 3rem;
+}
+
+.portfolio-layer p {
+    font-size: 1.6rem;
+    margin: 0.3rem 0 1rem;
+}
+
+.portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.portfolio-layer a i {
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+
+
+
+
 /* keyframes */
 
 @keyframes slideRight {
     0% {
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
         opacity: 0;
     }
 
@@ -211,7 +426,7 @@ section {
 
 @keyframes slideLeft {
     0% {
-        transform: translateX(100px);
+        transform: translateX(10rem);
         opacity: 0;
     }
 
@@ -223,7 +438,7 @@ section {
 
 @keyframes slideTop {
     0% {
-        transform: translateY(90px);
+        transform: translateY(5rem);
         opacity: 0;
     }
 
@@ -235,7 +450,7 @@ section {
 
 @keyframes slideBottom {
     0% {
-        transform: translateY(-100px);
+        transform: translateY(-10rem);
         opacity: 0;
     }
 
@@ -263,7 +478,7 @@ section {
     }
 
     50% {
-        transform: translateY(-24px);
+        transform: translateY(-2.4rem);
     }
 
     100% {
