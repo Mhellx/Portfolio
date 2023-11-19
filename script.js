@@ -9,7 +9,7 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height) {
+        if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
@@ -35,3 +35,16 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 };
+
+// Scroll reveal
+ScrollReveal({
+    reset: true,
+    distance: '50px',
+    duration: 2000,
+    delay: 200
+});
+
+ScrollReveal().reveal('.heading', { origin: 'top' });
+ScrollReveal().reveal('.formacao, .sobre-img img', { origin: 'left' });
+ScrollReveal().reveal('.sobre-content h3, .sobre-content p', { origin: 'right' });
+ScrollReveal().reveal('.portfolio-box, .contato form, .sobre-content a', { origin: 'bottom' });

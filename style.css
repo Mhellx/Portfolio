@@ -141,6 +141,7 @@ span {
     background-image: linear-gradient(var(--main-color), var(--main-color));
     background-repeat: no-repeat;
     background-position: -41rem 0;
+    background-clip: text;
     -webkit-background-clip: text;
     animation: slideTop 1s ease forwards, homeBgText 6s linear infinite;
     animation-delay: 0.7s, 2s;
@@ -246,7 +247,7 @@ span {
     background-color: var(--second-bg-color);
 }
 
-.sobre-img {
+.sobre-img img {
     width: 38vw;
     margin-left: -50px;
     animation: floatImage 4s ease-in-out infinite;
@@ -647,7 +648,7 @@ span {
         width: 100%;
         opacity: 1;
     }
-    
+
     75%,
     81% {
         opacity: 0;
@@ -672,8 +673,18 @@ span {
         padding: 10rem 3% 2rem;
     }
 
-    .footer {
-        padding: 2rem 3%;
+    .portfolio {
+        padding-bottom: 7rem;
+    }
+
+    .contato {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 860px) {
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -762,5 +773,35 @@ span {
         width: 70vw;
         height: auto;
         margin-top: 4rem;
+    }
+
+    .portfolio h2 {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 617px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contato form .input-box .input-field {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 365px) {
+    .inicio-img img {
+        width: 90vw;
+    }
+
+    .sobre-img img {
+        width: 90vw;
     }
 }
