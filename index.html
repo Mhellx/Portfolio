@@ -33,12 +33,14 @@
             <a href="#formacao" style="--i:3">
                 <p>Formação</p>
             </a>
-            <a href="#portfolio" style="--i:4">
-                <p>Portfolio</p>
+            <a href="#projetos" style="--i:4">
+                <p>Projetos</p>
             </a>
             <a href="#contato" style="--i:5">
                 <p>Contato</p>
             </a>
+
+            <span class="active-nav"></span>
         </nav>
     </header>
 
@@ -46,14 +48,19 @@
         <div class="inicio-content">
             <h3>Olá, eu sou o </h3>
             <h1>Michell Pereira</h1>
-            <h3><span>Desenvolvedor FullStack</span></h3>
+            <div class="text-animate">
+                <h3>Desenvolvedor FullStack</h3>
+            </div>
             <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime maiores provident nobis,
                 neque est
                 aperiam.</p>
             <div class="social-media">
-                <span style="--i:7"><a href="https://github.com/Mhellx" target="_blank"><i class='bx bxl-github'></i></a></span>
-                <span style="--i:8"><a href="https://www.linkedin.com/in/michell-pereira" target="_blank"><i class='bx bxl-linkedin'></i></a></span>
-                <span style="--i:9"><a href="https://www.instagram.com/mhell.exe/" target="_blank"><i class='bx bxl-instagram'></i></a></span>
+                <span style="--i:7"><a href="https://github.com/Mhellx" target="_blank"><i
+                            class='bx bxl-github'></i></a></span>
+                <span style="--i:8"><a href="https://www.linkedin.com/in/michell-pereira" target="_blank"><i
+                            class='bx bxl-linkedin'></i></a></span>
+                <span style="--i:9"><a href="https://www.instagram.com/mhell.exe/" target="_blank"><i
+                            class='bx bxl-instagram'></i></a></span>
                 <span style="--i:10"><a href="#" target="_blank"><i class='bx bxl-discord-alt'></i></a></span>
             </div>
             <p class="btn-span"><a href="#" class="btn">Baixar Currículo</a></p>
@@ -112,6 +119,7 @@
                                 incidunt nobis iusto officiis rerum dolorum iure temporibus veritatis.</p>
                         </div>
                     </div>
+
                 </div>
             </div>
 
@@ -128,11 +136,12 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section class="portfolio" id="portfolio">
+    <section class="portfolio" id="projetos">
         <h2 class="heading">Meus <span>Projetos</span></h2>
 
         <div class="portfolio-container">
@@ -162,7 +171,45 @@
                     <a href="#"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
+
         </div>
+    </section>
+
+    <section class="contato" id="contato">
+        <h2 class="heading">Me <span>Contate!</span></h2>
+
+        <form action="#">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Nome completo" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="email" placeholder="Email" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="number" placeholder="Número de telefone" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Assunto" required>
+                    <span class="focus"></span>
+                </div>
+            </div>
+
+            <div class="textarea-field">
+                <textarea name="" id="" cols="30" rows="7" placeholder="Sua mensagem" required></textarea>
+                <span class="focus"></span>
+            </div>
+
+            <div class="btn-box">
+                <button type="submit" class="btn" style="width: 100%;">Enviar Mensagem</button>
+            </div>
+        </form>
     </section>
 
     <script src="./script.js"></script>
