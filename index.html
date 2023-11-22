@@ -146,29 +146,57 @@
 
         <div class="portfolio-container">
             <div class="portfolio-box">
-                <img src="./img/AdvenNuture.png" alt="AdvenNuture">
+                <img src="./projetos/imagens/AdvenNuture.png" alt="AdvenNuture">
                 <div class="portfolio-layer">
                     <h4>AdvenNuture</h4>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, consequatur.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
+                    <a href="./projetos/executaveis/AdvenNuture.exe"><i class='bx bxs-download'></i></i></a>
                 </div>
             </div>
 
             <div class="portfolio-box">
-                <img src="./img/AdvenNuture.png" alt="AdvenNuture">
+                <img src="./projetos/imagens/HexaDev.PNG" alt="HexaDev">
                 <div class="portfolio-layer">
-                    <h4>AdvenNuture</h4>
+                    <h4>HexaDev</h4>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, consequatur.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
+                    <a href="https://hexadev.site/" target="_blank"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
 
             <div class="portfolio-box">
-                <img src="./img/AdvenNuture.png" alt="AdvenNuture">
+                <img src="./projetos/imagens/Codificador e decodificador.PNG" alt="Codificador e Decodificador">
                 <div class="portfolio-layer">
-                    <h4>AdvenNuture</h4>
+                    <h4>Codificador e Decodificador</h4>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, consequatur.</p>
-                    <a href="#"><i class='bx bx-link-external'></i></a>
+                    <a href="https://mhellx.github.io/Challenger-ONE-Decodificador/" target="_blank"><i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="./projetos/imagens/GamiGames.PNG" alt="GamiGames">
+                <div class="portfolio-layer">
+                    <h4>GamiGames</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, consequatur.</p>
+                    <a href="https://gamigame.netlify.app/" target="_blank"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="./projetos/imagens/Nuture2.png" alt="Nuture">
+                <div class="portfolio-layer">
+                    <h4>Nuture</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, consequatur.</p>
+                    <a href="./projetos/executaveis/Nuture.apk"><i class='bx bxs-download'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="./projetos/imagens/LogoQuiz.PNG" alt="LogoQuiz">
+                <div class="portfolio-layer">
+                    <h4>LogoQuiz</h4>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, consequatur.</p>
+                    <a href="https://mhellx.github.io/LogoQuiz/" target="_blank"><i class='bx bx-link-external'></i></a>
                 </div>
             </div>
 
@@ -181,33 +209,40 @@
         <form action="#">
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="Nome completo" required>
+                    <input type="text" id="nome" class="item" placeholder="Nome completo">
                     <span class="focus"></span>
+                    <div class="error-txt">Nome completo não pode ficar em branco!</div>
                 </div>
                 <div class="input-field">
-                    <input type="email" placeholder="Email" required>
+                    <input type="email" id="email" class="item" placeholder="Email">
                     <span class="focus"></span>
+                    <div class="error-txt email">Email não pode ficar em branco!</div>
                 </div>
             </div>
 
             <div class="input-box">
                 <div class="input-field">
-                    <input type="number" placeholder="Número de telefone" required>
+                    <input type="number" id="phone" class="item" placeholder="Número de telefone">
                     <span class="focus"></span>
+                    <div class="error-txt">Número de telefone não pode ficar em branco!</div>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Assunto" required>
+                    <input type="text" id="assunto" class="item" placeholder="Assunto">
                     <span class="focus"></span>
+                    <div class="error-txt">Assunto não pode ficar em branco!</div>
                 </div>
             </div>
 
-            <div class="textarea-field">
-                <textarea name="" id="" cols="30" rows="7" placeholder="Sua mensagem" required></textarea>
-                <span class="focus"></span>
+            <div class="textarea-box">
+                <div class="textarea-field">
+                    <textarea name="" id="mensagem" class="item" cols="30" rows="6" placeholder="Sua mensagem"></textarea>
+                    <span class="focus"></span>
+                    <div class="error-txt">Mensagem não pode ficar em branco!</div>
+                </div>
             </div>
 
             <div class="btn-box">
-                <button type="submit" class="btn" style="width: 100%;">Enviar Mensagem</button>
+                <button type="submit" class="btn" style="width: 100%; margin-top: 1rem">Enviar Mensagem</button>
             </div>
         </form>
     </section>
@@ -216,6 +251,8 @@
         <i class='bx bx-up-arrow-alt'></i>
     </a>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./script.js"></script>
 </body>
