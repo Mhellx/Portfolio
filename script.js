@@ -84,6 +84,10 @@ function enviarEmail() {
                 timer: 10000,
                 timerProgressBar: true,
             });
+            form.reset();
+            for (const item of items) {
+                item.classList.remove("valido");
+            }
         } else {
             Swal.fire({
                 icon: "error",
@@ -94,7 +98,7 @@ function enviarEmail() {
                 backdrop: "rgba(0, 0, 0, 0.4)",
                 timer: 10000,
                 timerProgressBar: true,
-              });
+            });
             console.log("Error: " + message);
             console.log(body);
             console.log(assunto.value);
@@ -190,10 +194,6 @@ form.addEventListener("submit", (e) => {
         !mensagem.classList.contains("error")
     ) {
         enviarEmail();
-        form.reset();
-        for (const item of items) {
-            item.classList.remove("valido");
-        }
         return false;
     }
 });
