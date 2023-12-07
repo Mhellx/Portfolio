@@ -48,7 +48,7 @@ ScrollReveal({
 ScrollReveal().reveal(".heading, .sobre-content h3", { origin: "top" });
 ScrollReveal().reveal(".formacao, .sobre-img img", { origin: "left" });
 ScrollReveal().reveal(
-    ".portfolio-box, .contato form, .sobre-content a, .sobre-content p",
+    ".portfolio-box, .contato form, .sobre-content a, .sobre-content p, .icons",
     { origin: "bottom" }
 );
 
