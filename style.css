@@ -10,10 +10,10 @@
 }
 
 :root {
-    --bg-color: #1f242d;
-    --second-bg-color: #323946;
+    --bg-color: #191924;
+    --second-bg-color: #262535;
     --text-color: #fff;
-    --main-color: #0ef;
+    --main-color: #2dff00;
 }
 
 html {
@@ -198,7 +198,7 @@ span {
     border-radius: 50%;
     font-size: 2rem;
     color: var(--main-color);
-    margin: 3rem 1.5rem 3rem 0;
+    margin: 3rem 2rem 3rem 0;
     transition: 0.3s ease;
 }
 
@@ -285,6 +285,7 @@ span {
 
 .icons img {
     margin: 0 1rem 2rem 1rem;
+    filter: drop-shadow(0px 0px 0.2rem var(--bg-color));
 }
 
 .formacao {
@@ -438,7 +439,7 @@ span {
 }
 
 .portfolio-layer h4 {
-    font-size: 3rem;
+    font-size: 2.3rem;
 }
 
 .portfolio-layer p {
@@ -450,8 +451,8 @@ span {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     background: var(--text-color);
     border-radius: 50%;
 }
@@ -735,7 +736,8 @@ span {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 795px) {
+
     #menu-icon {
         display: block;
     }
@@ -825,15 +827,22 @@ span {
     .portfolio h2 {
         margin-bottom: 3rem;
     }
-}
 
-@media (max-width: 617px) {
     .portfolio-container {
         grid-template-columns: 1fr;
     }
 
+    .contato form .input-box {
+        margin-bottom: 0;
+    }
+
     .contato form .input-box .input-field {
         width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .contato form .textarea-box {
+        margin-top: 1rem;
     }
 }
 
