@@ -429,7 +429,7 @@ span {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 0 4rem;
+    padding: 0 2rem;
     transform: translateY(100%);
     transition: 0.5s ease;
 }
@@ -460,6 +460,11 @@ span {
 .portfolio-layer a i {
     font-size: 2rem;
     color: var(--second-bg-color);
+}
+
+.portfolio .icons img {
+    height: 3.5rem;
+    width: 3.5rem;
 }
 
 .contato {
@@ -706,7 +711,7 @@ span {
 
 /* media */
 
-@media (max-width: 1300px) {
+@media (max-width: 1316px) {
     .portfolio-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -830,6 +835,11 @@ span {
 
     .portfolio-container {
         grid-template-columns: 1fr;
+    }
+
+    .icons img{
+        height: 3.5rem;
+        width: 3.5rem;
     }
 
     .contato form .input-box {
